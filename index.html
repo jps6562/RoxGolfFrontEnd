@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RoxGolf.com</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <button class="back-btn" id="backBtn" onclick="goBack()" aria-label="Back">&#8592;</button>
+    <div class="header-wordmark">
+      <div class="wm-main">Rox<span class="gold">Golf</span>.com</div>
+      <div class="wm-sub" id="pageTitle">Home</div>
+    </div>
+  </header>
+
+  <!-- ── BREADCRUMB ── -->
+  <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb"></nav>
+
+  <!-- ════════════════════════════
+       HOME
+  ════════════════════════════ -->
+  <main class="screen active" id="screen-home">
+    <div class="home-hero">
+      <div class="hero-badge">⛳</div>
+      <div>
+        <div class="hero-name">Rox<span class="gold">Golf</span>.com</div>
+        <div class="hero-tag">McKees Rocks, PA &middot; Western PA &amp; Eastern Ohio</div>
+      </div>
+    </div>
+
+    <button class="nav-btn lg golf" onclick="nav('golf','Golf',['Home'])">
+      <div class="bi bi-golf">⛳</div>
+      <span class="btn-label">Golf</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn lg bowl" onclick="nav('bowling','Bowling',['Home'])">
+      <div class="bi bi-bowl">🎳</div>
+      <span class="btn-label">Bowling</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn lg pok" onclick="nav('poker','Poker',['Home'])">
+      <div class="bi bi-pok">🃏</div>
+      <span class="btn-label">Albert's Game</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn lg" onclick="nav('photos','Photo Gallery',['Home'])">
+      <div class="bi">📷</div>
+      <span class="btn-label">Photo Gallery</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn sm" onclick="window.open('https://www.instagram.com/roxgolfinfo','_blank')">
+      <div class="bi">📸</div>
+      <span class="btn-label">Instagram @roxgolfinfo — Live Results</span>
+      <span class="btn-arrow">↗</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       GOLF
+  ════════════════════════════ -->
+  <main class="screen" id="screen-golf">
+    <button class="nav-btn golf" onclick="nav('rga-rules','RgA Rules',['Home','Golf'])">
+      <div class="bi bi-golf">📋</div>
+      <span class="btn-label">RgA Rules</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn sm golf" onclick="nav('donnie','Donnie Coultas Memorial',['Home','Golf'])">
+      <div class="bi bi-golf">🏆</div>
+      <span class="btn-label">Donnie Coultas Memorial Golf Tour</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn trip" onclick="nav('golf-trip','McKees Rocks MASTERS',['Home','Golf'])">
+      <div class="bi bi-trip">✈️</div>
+      <span class="btn-label">McKees Rocks MASTERS (Golf Trip)</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn league" onclick="nav('golf-league','Tuesday Golf League',['Home','Golf'])">
+      <div class="bi bi-league">🏅</div>
+      <span class="btn-label">Tuesday Golf League</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn" onclick="nav('golf-misc','Golf Misc',['Home','Golf'])">
+      <div class="bi bi-golf">📌</div>
+      <span class="btn-label">Golf Misc</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <div class="sec-label">More</div>
+
+    <button class="nav-btn sm" onclick="nav('bonus-card','Bonus Card',['Home','Golf'])">
+      <div class="bi">🎴</div>
+      <span class="btn-label">Bonus Card</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn sm" onclick="nav('old-news','Old News',['Home','Golf'])">
+      <div class="bi">📰</div>
+      <span class="btn-label">Old News</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       GOLF TRIP (McKees Rocks MASTERS)
+  ════════════════════════════ -->
+  <main class="screen" id="screen-golf-trip">
+    <button class="nav-btn trip" onclick="nav('trip-info','Trip Info',['Home','Golf','McKees Rocks MASTERS'])">
+      <div class="bi bi-trip">ℹ️</div>
+      <span class="btn-label">Trip Info</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn trip" onclick="nav('trip-field','Trip Field',['Home','Golf','McKees Rocks MASTERS'])">
+      <div class="bi bi-trip">👥</div>
+      <span class="btn-label">Trip Field</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn trip" onclick="nav('trip-pairings','Trip Pairings',['Home','Golf','McKees Rocks MASTERS'])">
+      <div class="bi bi-trip">🤝</div>
+      <span class="btn-label">Trip Pairings</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn trip" onclick="nav('trip-condos','Condo Info',['Home','Golf','McKees Rocks MASTERS'])">
+      <div class="bi bi-trip">🏠</div>
+      <span class="btn-label">Condo Info</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn arc" onclick="nav('trip-archives','Trip Archives',['Home','Golf','McKees Rocks MASTERS'])">
+      <div class="bi bi-slate">📚</div>
+      <span class="btn-label">Trip Archives</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       TRIP INFO
+  ════════════════════════════ -->
+  <main class="screen" id="screen-trip-info">
+    <button class="nav-btn trip" onclick="nav('trip-current','2026 Trip Info',['Home','Golf','McKees Rocks MASTERS','Trip Info'])">
+      <div class="bi bi-trip">📍</div>
+      <span class="btn-label">2026 Trip Info</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn" onclick="nav('trip-history','Trip History &amp; Info',['Home','Golf','McKees Rocks MASTERS','Trip Info'])">
+      <div class="bi bi-golf">📖</div>
+      <span class="btn-label">Trip History &amp; Info</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       TRIP ARCHIVES
+  ════════════════════════════ -->
+  <main class="screen" id="screen-trip-archives">
+    <button class="nav-btn trip" onclick="nav('all-time','All-Time Scores',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-trip">🥇</div>
+      <span class="btn-label">Trip All-Time Scores</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <div class="sec-label">By Year Range</div>
+
+    <button class="nav-btn sm arc" onclick="nav('yr-2426','Trip Archives 2024–2026',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2024 – 2026</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn sm arc" onclick="nav('yr-1723','Trip Archives 2017–2023',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2017 – 2023</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn sm arc" onclick="nav('yr-1316','Trip Archives 2013–2016',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2013 – 2016</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn sm arc" onclick="nav('yr-0612','Trip Archives 2006–2012',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2006 – 2012</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn sm arc" onclick="nav('yr-9905','Trip Archives 1999–2005',['Home','Golf','McKees Rocks MASTERS','Trip Archives'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">1999 – 2005</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       GOLF LEAGUE (Tuesday Golf League)
+  ════════════════════════════ -->
+  <main class="screen" id="screen-golf-league">
+    <button class="nav-btn league" onclick="nav('gl-info','2026 League Info',['Home','Golf','Tuesday Golf League'])">
+      <div class="bi bi-league">📋</div>
+      <span class="btn-label">2026 League Info</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn league" onclick="nav('gl-stats','League Stats',['Home','Golf','Tuesday Golf League'])">
+      <div class="bi bi-league">📊</div>
+      <span class="btn-label">League Stats</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn arc" onclick="nav('gl-archives','League Archives',['Home','Golf','Tuesday Golf League'])">
+      <div class="bi bi-slate">📚</div>
+      <span class="btn-label">League Archives</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       BOWLING
+  ════════════════════════════ -->
+  <main class="screen" id="screen-bowling">
+    <button class="nav-btn bowl" onclick="nav('bl-current','Bowling — Current',['Home','Bowling'])">
+      <div class="bi bi-bowl">🎳</div>
+      <span class="btn-label">Bowling — Current</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn bowl" onclick="nav('bl-records','Bowling — Records',['Home','Bowling'])">
+      <div class="bi bi-bowl">🏆</div>
+      <span class="btn-label">Bowling — Records</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn arc" onclick="nav('bl-1819','Bowling 2018/19 – 2024/25',['Home','Bowling'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2018/19 – 2024/25</span>
+      <span class="btn-arrow">›</span>
+    </button>
+
+    <button class="nav-btn arc" onclick="nav('bl-1314','Bowling 2013/14 – 2017/18',['Home','Bowling'])">
+      <div class="bi bi-slate">📅</div>
+      <span class="btn-label">2013/14 – 2017/18</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ════════════════════════════
+       PHOTO GALLERY
+  ════════════════════════════ -->
+  <main class="screen" id="screen-photos">
+    <button class="nav-btn golf" onclick="nav('photo-trip','Trip Player Photos',['Home','Photo Gallery'])">
+      <div class="bi bi-golf">📸</div>
+      <span class="btn-label">Trip Player Photos</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn golf" onclick="nav('photo-fun','Fun Photos',['Home','Photo Gallery'])">
+      <div class="bi bi-golf">😄</div>
+      <span class="btn-label">Fun Photos</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn golf" onclick="nav('photo-former','Former Player Photos',['Home','Photo Gallery'])">
+      <div class="bi bi-golf">👤</div>
+      <span class="btn-label">Former Player Photos</span>
+      <span class="btn-arrow">›</span>
+    </button>
+    <button class="nav-btn golf" onclick="nav('photo-league','League Photos',['Home','Photo Gallery'])">
+      <div class="bi bi-golf">📷</div>
+      <span class="btn-label">League Photos</span>
+      <span class="btn-arrow">›</span>
+    </button>
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       CONTENT PAGES
+  ══════════════════════════════════════════ -->
+
+  <!-- RGA RULES -->
+  <main class="screen" id="screen-rga-rules">
+    <div class="card">
+      <h3>RgA Rules — Recreational Golfers of America</h3>
+      <p>RgA Rules promote speedy play, they eliminate unfortunate lies, and they make golf a little bit easier and <strong>MUCH MORE fun.</strong></p>
+      <ul class="rule-list">
+        <li><strong>Handicaps</strong> — World Handicap System (WHS), updated after each posted round</li>
+        <li><strong>Scoring</strong> — Stroke play, net score against par, full handicap applied</li>
+        <li><strong>Out of Bounds</strong> — Stroke &amp; distance unless preferred-lie rule is active</li>
+        <li><strong>Lost Ball</strong> — 2-stroke penalty, drop in approximate area of loss</li>
+        <li><strong>Pace of Play</strong> — 40 seconds maximum per shot once it is your turn</li>
+        <li><strong>Mulligans</strong> — One per nine holes, tee shots only, declared before teeing</li>
+        <li><strong>Gimme Putts</strong> — Within the leather, by agreement of playing partners</li>
+        <li><strong>Preferred Lies</strong> — When active, ball may be moved within one club length, no closer to hole</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- DONNIE COULTAS -->
+  <main class="screen" id="screen-donnie">
+    <div class="card">
+      <h3>Donnie Coultas Memorial Golf Tour</h3>
+      <ul class="rule-list">
+        <li><strong>When</strong> — Once per month, May through September</li>
+        <li><strong>Where</strong> — All over Western PA and Eastern Ohio</li>
+      </ul>
+      <p style="margin-top:14px;font-style:italic;color:var(--text-3);">Celebrating our friends who left too soon.</p>
+      <p>In memory of Donnie Coultas and all those who played this game with us. The Memorial Tour keeps their spirit alive on every course we play.</p>
+    </div>
+  </main>
+
+  <!-- TRIP CURRENT (2026 Info) -->
+  <main class="screen" id="screen-trip-current">
+    <div class="card">
+      <h3>2026 McKees Rocks MASTERS — Trip Info</h3>
+      <ul class="rule-list">
+        <li><strong>Destination</strong> — Myrtle Beach, SC area</li>
+        <li><strong>Format</strong> — Annual spring tournament</li>
+        <li><strong>2026 Cup Champion</strong> — Dan Patterson</li>
+        <li><strong>2026 Runner-Up</strong> — Andrew Taylor</li>
+      </ul>
+      <div class="data-note">Full trip details posted to this page each year.</div>
+    </div>
+  </main>
+
+  <!-- TRIP HISTORY -->
+  <main class="screen" id="screen-trip-history">
+    <div class="card">
+      <h3>Trip History &amp; Info</h3>
+      <p>The McKees Rocks MASTERS Golf Tournament is played every Spring in the Myrtle Beach, SC area. The annual trip brings together the RgA group for several days of competitive and recreational golf.</p>
+      <p>The trip format includes stroke play, team events, a skins game, and the Donnie Coultas Memorial Round. Final standings are posted in Trip Archives after each trip concludes.</p>
+    </div>
+  </main>
+
+  <!-- TRIP FIELD -->
+  <main class="screen" id="screen-trip-field">
+    <div class="card">
+      <h3>2026 Trip Field</h3>
+      <p>Confirmed player list posted once registrations close.</p>
+      <div class="data-note">Player roster updated here each year.</div>
+    </div>
+  </main>
+
+  <!-- TRIP PAIRINGS -->
+  <main class="screen" id="screen-trip-pairings">
+    <div class="card">
+      <h3>2026 Trip Pairings</h3>
+      <p>Pairings posted the week before departure. Groups balanced by handicap index for competitive fairness.</p>
+    </div>
+  </main>
+
+  <!-- TRIP CONDOS -->
+  <main class="screen" id="screen-trip-condos">
+    <div class="card">
+      <h3>2026 Condo Info</h3>
+      <p>Lodging details and room assignments posted once accommodations are confirmed. Roommate preferences accepted at registration.</p>
+    </div>
+  </main>
+
+  <!-- ALL-TIME SCORES -->
+  <main class="screen" id="screen-all-time">
+    <div class="card">
+      <h3>Trip All-Time Scores</h3>
+      <div class="standings-wrap">
+        <table class="standings">
+          <thead><tr><th>Record</th><th>Holder</th><th>Score</th><th>Year</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Low Gross (Round)</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="name">Low Net (Round)</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="name">Low Gross (Trip)</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="name">Low Net (Trip)</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="name">Cup Champion (Most Recent)</td><td>Dan Patterson</td><td>—</td><td>2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- TRIP ARCHIVE PAGES -->
+  <main class="screen" id="screen-yr-2426"><div class="card"><h3>Trip Archives 2024 – 2026</h3><p>Results from the 2024, 2025, and 2026 McKees Rocks MASTERS.</p></div></main>
+  <main class="screen" id="screen-yr-1723"><div class="card"><h3>Trip Archives 2017 – 2023</h3><p>Results from the 2017 through 2023 McKees Rocks MASTERS.</p></div></main>
+  <main class="screen" id="screen-yr-1316"><div class="card"><h3>Trip Archives 2013 – 2016</h3><p>Results from the 2013 through 2016 trips.</p></div></main>
+  <main class="screen" id="screen-yr-0612"><div class="card"><h3>Trip Archives 2006 – 2012</h3><p>Results from the 2006 through 2012 trips.</p></div></main>
+  <main class="screen" id="screen-yr-9905"><div class="card"><h3>Trip Archives 1999 – 2005</h3><p>Results from the 1999 through 2005 trips.</p></div></main>
+
+  <!-- GOLF LEAGUE INFO -->
+  <main class="screen" id="screen-gl-info">
+    <div class="card">
+      <h3>2026 Tuesday Golf League Info</h3>
+      <ul class="rule-list">
+        <li><strong>Format</strong> — Individual stroke play, net scoring against par</li>
+        <li><strong>Handicap System</strong> — World Handicap System (WHS)</li>
+        <li><strong>Season</strong> — April opening through September</li>
+        <li><strong>Day</strong> — Tuesday evenings</li>
+        <li><strong>Opening Night</strong> — April 1, 2025</li>
+        <li><strong>Matchplay Divisions</strong> — A Scratch, B Scratch, C Scratch</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- GOLF LEAGUE STATS (API hookup) -->
+  <main class="screen" id="screen-gl-stats">
+    <div class="card">
+      <h3>Recent Champions</h3>
+      <div class="standings-wrap">
+        <table class="standings">
+          <thead><tr><th>Year</th><th>League Champion</th><th>A Matchplay</th><th>B Matchplay</th><th>C Matchplay</th></tr></thead>
+          <tbody>
+            <tr><td class="name">2025</td><td>Mark Black</td><td>Mike Willoughby</td><td>Jeff Kirkwood</td><td>Jim Felouzis</td></tr>
+            <tr><td class="name">2024</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="name">2023</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>2026 Standings</h3>
+      <div class="standings-wrap">
+        <table class="standings">
+          <thead>
+            <tr><th class="pos">#</th><th>Player</th><th>Rounds</th><th>Avg Net</th><th>HCP</th></tr>
+          </thead>
+          <tbody id="leagueStandingsBody">
+            <tr><td colspan="5" style="text-align:center;color:var(--text-3);padding:16px">No scores posted yet this season</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="data-note">Live standings via <code>/api/golf/standings/2026</code></div>
+    </div>
+
+    <div class="card">
+      <h3>Post a Score</h3>
+      <div class="form-group">
+        <label for="scorePlayer">Player Name</label>
+        <input type="text" id="scorePlayer" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="scoreGross">Gross Score</label>
+          <input type="number" id="scoreGross" placeholder="82" min="50" max="150">
+        </div>
+        <div class="form-group">
+          <label for="scoreCourse">Course Rating</label>
+          <input type="number" id="scoreCourse" placeholder="71.4" step="0.1" min="60" max="80">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="scoreSlope">Slope Rating</label>
+          <input type="number" id="scoreSlope" placeholder="128" min="55" max="155">
+        </div>
+        <div class="form-group">
+          <label for="scorePar">Course Par</label>
+          <input type="number" id="scorePar" placeholder="72" min="60" max="75">
+        </div>
+      </div>
+      <button class="submit-btn" onclick="postScore()">Post Score &amp; Calculate Differential</button>
+      <div class="api-note">Saved to database via /api/golf/scores</div>
+      <div class="hcp-result" id="hcpResult">
+        <div class="hcp-num" id="hcpValue">—</div>
+        <div class="hcp-lbl">WHS Score Differential</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- LEAGUE ARCHIVES -->
+  <main class="screen" id="screen-gl-archives">
+    <div class="card">
+      <h3>Tuesday Golf League Archives</h3>
+      <div class="sec-label" style="padding:0 0 8px">Season Stats</div>
+      <ul class="rule-list">
+        <li><strong>2026 Stats</strong> — Current season</li>
+        <li><strong>2025 Stats</strong> — Champion: Mark Black</li>
+        <li><strong>2024 Stats</strong> — See archive</li>
+        <li><strong>2023 Stats</strong> — See archive</li>
+        <li><strong>2022 Stats</strong> — See archive</li>
+        <li><strong>2021 Stats</strong> — See archive</li>
+        <li><strong>2020 Stats</strong> — See archive</li>
+        <li><strong>2019 Stats</strong> — See archive</li>
+        <li><strong>2018 Stats</strong> — See archive</li>
+        <li><strong>2017 Stats</strong> — See archive</li>
+        <li><strong>2016 Stats</strong> — See archive</li>
+        <li><strong>2015 Stats</strong> — See archive</li>
+        <li><strong>2014 Stats</strong> — See archive</li>
+        <li><strong>2013 Stats</strong> — See archive</li>
+        <li><strong>2012 Stats</strong> — See archive</li>
+        <li><strong>2011 Stats</strong> — See archive</li>
+        <li><strong>2010 Stats</strong> — See archive</li>
+        <li><strong>2009 Stats</strong> — See archive</li>
+        <li><strong>2008 Stats</strong> — See archive</li>
+        <li><strong>2007 Stats</strong> — See archive</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- GOLF MISC -->
+  <main class="screen" id="screen-golf-misc">
+    <div class="card"><h3>Golf Misc</h3><p>Course recommendations, equipment tips, and other resources for RgA members.</p></div>
+  </main>
+
+  <!-- BONUS CARD -->
+  <main class="screen" id="screen-bonus-card">
+    <div class="card"><h3>Bonus Card</h3><p>Bonus card rules and current side-action standings for the season. Details posted at the start of each year.</p></div>
+  </main>
+
+  <!-- OLD NEWS -->
+  <main class="screen" id="screen-old-news">
+    <div class="card"><h3>Old News</h3><p>Archive of past announcements, event recaps, and news items from previous RoxGolf seasons.</p></div>
+  </main>
+
+  <!-- BOWLING PAGES -->
+  <main class="screen" id="screen-bl-current">
+    <div class="card">
+      <h3>Bowling — Current Season</h3>
+      <div class="standings-wrap">
+        <table class="standings">
+          <thead><tr><th class="pos">#</th><th>Team / Player</th><th>W</th><th>L</th><th>Avg</th></tr></thead>
+          <tbody id="bowlingStandingsBody">
+            <tr><td colspan="5" style="text-align:center;color:var(--text-3);padding:16px">No scores posted yet this season</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="data-note">Live standings via <code>/api/bowling/standings/2026</code></div>
+    </div>
+  </main>
+
+  <main class="screen" id="screen-bl-records">
+    <div class="card"><h3>Bowling — Records</h3><p>All-time high games, series records, and season champions.</p></div>
+  </main>
+
+  <main class="screen" id="screen-bl-1819">
+    <div class="card"><h3>Bowling 2018/19 – 2024/25</h3><p>Season results from 2018/19 through 2024/25.</p></div>
+  </main>
+
+  <main class="screen" id="screen-bl-1314">
+    <div class="card"><h3>Bowling 2013/14 – 2017/18</h3><p>Season results from 2013/14 through 2017/18.</p></div>
+  </main>
+
+  <!-- ALBERT'S GAME (Poker) -->
+  <main class="screen" id="screen-poker">
+    <div class="card">
+      <h3>Albert's Game</h3>
+      <p>Albert's Game schedule, buy-in details, and results. Contact the organizer for next game information.</p>
+    </div>
+  </main>
+
+  <!-- PHOTO PAGES -->
+  <main class="screen" id="screen-photo-trip"><div class="card"><h3>Trip Player Photos</h3><p>Photos of players from the annual McKees Rocks MASTERS Golf Trip.</p></div></main>
+  <main class="screen" id="screen-photo-fun"><div class="card"><h3>Fun Photos</h3><p>Fun photos from events, outings, and gatherings.</p></div></main>
+  <main class="screen" id="screen-photo-former"><div class="card"><h3>Former Player Photos</h3><p>Photos of former players and members of the RgA group.</p></div></main>
+  <main class="screen" id="screen-photo-league"><div class="card"><h3>League Photos</h3><p>Photos from Tuesday Golf League nights and events.</p></div></main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">RoxGolf.com &middot; McKees Rocks, PA &middot; Western PA &amp; Eastern Ohio</footer>
+
+</div><!-- #app -->
+
+<script src="/js/navigation.js"></script>
+<script src="/js/api.js"></script>
+</body>
+</html>
